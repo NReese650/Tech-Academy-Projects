@@ -1,0 +1,40 @@
+/* Use warm colors for the background and text */
+body {
+  background-color: #FFDAB9; /* peachpuff */
+  color: #8B4513; /* saddlebrown */
+}
+
+header {
+    background-color: #FFC0CB; /* set the background color to pink */
+    padding: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+  }
+
+
+/* Use a gradient background for a softer and more inviting look */
+body {
+  background-image: linear-gradient(#FFDAB9, #F08080);
+}
+
+html {
+  font-size: 16px;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+form {
+    width: 80%; /* set the width of the form inputs */
+    margin: 20px auto; /* set the margin between the inputs */
+  }
+  
+  input[type="text"],
+  select,
+  textarea {
+    border: 2px solid #ccc; /* set the border of the inputs */
+    border-radius: 5px; /* set the border radius of the inputs */
+    padding: 10px; /* add padding to the inputs */
+    font-size: 16px; /* set the font size of the inputs */
+    font-family: Arial, sans-serif; /* set the font family of the inputs */
+  }
