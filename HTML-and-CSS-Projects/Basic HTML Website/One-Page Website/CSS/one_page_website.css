@@ -38,3 +38,208 @@ form {
     font-size: 16px; /* set the font size of the inputs */
     font-family: Arial, sans-serif; /* set the font family of the inputs */
   }
+
+  span { font-color: solid black;
+    font-weight: bold;
+  }
+  div.gallery {
+    width: 220px;
+    height: auto;
+    margin: 2px;
+    float: middle;
+    img-align: wrap;
+    box-sizing: border-box;
+  }
+  
+  div.menu {
+    position: sticky;
+    top: 0;
+    background-color: #FFC0CB;
+    padding: 10px 0px 10px 0px;
+    margin: 0;
+    overflow: hidden;
+  }
+  div.menu a {
+    float: left;
+    position: static;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+  }
+  
+  div.gallery_layout {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 5px;
+    padding: 5px;
+    justify-content: center;
+  }
+  
+  .gallery_layout > .gallery {
+    padding: 0 8px;
+  }
+
+  .gallery_layout::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .gallery {
+    float: left;
+    width: 25%;
+  }
+
+  div.gallery_layout img {
+        transform-origin: center center;
+        transition: transform 0.5s ease;
+  }
+
+  div.gallery:hover {
+  border: 3px solid black;
+  }
+
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  div.video_player { text-align: center;
+    border: 5px solid black;
+    font-weight: bold;
+    margin: 10px;
+  }
+  input[type=text], select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+  }
+
+  input[type=submit] {
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+      background-color: red;
+  }
+
+  .container {
+      border-radius: 5px;
+      background-color: cream;
+      padding: 20px;
+    }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0%;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.close {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.caption-container {
+  text-align: center;
+  background-color: black;
+  padding: 2px 16px;
+  color: white;
+}
+
+.mySlides {
+  display: none;
+}

@@ -5,98 +5,8 @@
 		<title>Dogs</title>
 		<link rel="icon" type="image/x-icon" href="./pics/favicon.png">
 		<link rel="stylesheet" type="text/css" href="./CSS/one_page_website.css">
-		<style>
-			span { font-color: solid black;
-				font-weight: bold;
-			}
-			div.gallery {
-				width: 220px;
-				height: auto;
-				margin: 2px;
-				float: middle;
-				img-align: wrap;
-				box-sizing: border-box;
-			}
-			
-			div.menu {
-				position: sticky;
-				top: 0;
-				background-color: #FFC0CB;
-				padding: 10px 0px 10px 0px;
-				margin: 0;
-				overflow: hidden;
-			}
-			div.menu a {
-				float: left;
-				position: static;
-				color: white;
-				text-align: center;
-				padding: 14px 16px;
-				text-decoration: none;
-				font-size: 20px;
-			}
-			
-			div.gallery_layout {
-				display: flex;
-				flex-wrap: wrap;
-				margin: 0 5px;
-				padding: 5px;
-				justify-content: center;
-			}
+  		<script src="JS/one_page_website.js" defer></script>
 
-			div.gallery_layout img {
-   				 transform-origin: center center;
-   				 transition: transform 0.5s ease;
-			}
-
-			div.gallery:hover {
-			border: 3px solid black;
-			}
-
-			div.gallery img {
-				width: 100%;
-				height: auto;
-			}
-			
-			div.desc {
-				padding: 15px;
-				text-align: center;
-			}
-			div.video_player { text-align: center;
-				border: 5px solid black;
-				font-weight: bold;
-				margin: 10px;
-			}
-			input[type=text], select, textarea {
-					width: 100%;
-					padding: 12px;
-					border: 1px solid #ccc;
-					border-radius: 4px;
-					box-sizing: border-box;
-					margin-top: 6px;
-					margin-bottom: 16px;
-					resize: vertical;
-			}
-
-			input[type=submit] {
-					background-color: black;
-					color: white;
-					padding: 12px 20px;
-					border: none;
-					border-radius: 4px;
-					cursor: pointer;
-			}
-
-			input[type=submit]:hover {
-					background-color: red;
-			}
-
-			.container {
-					border-radius: 5px;
-					background-color: cream;
-					padding: 20px;
-				}
-		</style>
 	</head>
 	<body>
 		<!-- NAV -->
@@ -124,83 +34,99 @@
 		
 		<!-- GALLERY -->
 		<section>
-			<div id="gallery">
-				<h1>Gallery</h1>
+
+			<h1>Gallery</h1>
+
 				<div class="gallery_layout">
+					
+						<div class="gallery">
+							<img src="pics/thumb/pic_1.jpg" style="width:100%" alt="In the Field" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+						</div>
+		
 				
-					<!--PHOTO-CONTAINER 1 -->
-					<div>
 						<div class="gallery">
-							<img src=".\pics\thumb\pic_1.jpg" alt="Image not found">
-							<div class="desc">
-								<h3>In the Field</h3>
-								<p>Young dog enjoying the outdoors</p>
-							</div>
+							<img src="pics/thumb/pic_2.jpg" style="width:100%" alt="3 Friends" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
 						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 1 -->
 					
-					<!--PHOTO-CONTAINER 2 -->
-					<div>
 						<div class="gallery">
-							<img src=".\pics\thumb\pic_2.jpg" alt="Image not found">
-							<div class="desc">
-								<h3>3 Friends</h3>
-								<p>Nothing like some quality time</p>
-							</div>
+							<img src="pics/thumb/pics_3.jpg" style="width:100%" alt="Get your exercise" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
 						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 2 -->
 					
-					<!--PHOTO-CONTAINER 3 -->
-					<div>
 						<div class="gallery">
-							<img src=".\pics\thumb\pics_3.jpg" alt="Image not found">
-							<div class="desc">
-								<h3>Get your exercise</h3>
-								<p>Making sure to stay active every day</p>
-							</div>
+							<img src="pics/thumb/pic_4.jpg" style="width:100%" alt="Stay positive" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
 						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 3 -->
 					
-					<!--PHOTO-CONTAINER 4 -->
-					<div class="gallery">
-						<div>
-							<img src=".\pics\thumb\pic_4.jpg" alt="Image not found">
-							<div class="desc">
-								<h3>Stay positive</h3>
-								<p>Try and find something to make you smile</p>
-							</div>
-						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 4 -->
-					
-					<!--PHOTO-CONTAINER 5 -->
-					<div>
 						<div class="gallery">
-							<img src=".\pics\thumb\pic_5.jpg" alt="Image not found">
-							<div class="desc">
-								<h3>Family</h3>
-								<p>Family portrait</p>
-							</div>
+							<img src="pics/thumb/pic_5.jpg" style="width:100%" alt="Family" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
 						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 5 -->
 					
-					<!--PHOTO-CONTAINER 6 -->
-					<div>
 						<div class="gallery">
-							<img src=".\pics\thumb\pic_6.jpg" alt="Image not found">
-							<div class="desc">
-								<h3>Professional</h3>
-								<p>A dog's professional portrait</p>
-							</div>
+							<img src="pics/thumb/pic_6.jpg" style="width:100%" alt="Professional" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
 						</div>
-					</div>
-					<!-- END PHOTO-CONTAINER 6 -->
 					
 				</div>
+		
+			<div id="myModal" class="modal">
+				<span class="close cursor" onclick="closeModal()">&times;</span>
+				<div class="modal-content">
+
+					<div class="mySlides">
+						<div class="numbertext">1/6</div>
+						<img src="pics/thumb/pic_1.jpg" style="width:100%">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">2/6</div>
+						<img src="pics/thumb/pic_2.jpg" style="width:100%">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">3/6</div>
+						<img src="pics/thumb/pics_3.jpg" style="width:100%">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">4/6</div>
+						<img src="pics/thumb/pic_4.jpg" style="width:100%">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">5/6</div>
+						<img src="pics/thumb/pic_5.jpg" style="width:100%">
+					</div>
+					<div class="mySlides">
+						<div class="numbertext">6/6</div>
+						<img src="pics/thumb/pic_6.jpg" style="width:100%">
+					</div>
+
+					<!-- Next/previous controls -->
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+					<div class="caption-container">
+						<p id="caption"></p>
+					</div>
+				  
+					
+					<div class="gallery">
+						<img class="demo cursor" src="pics/thumb/pic_1.jpg" style="width:100%" onclick="currentSlide(1)" alt="In the Field">
+					</div>
+				
+					<div class="gallery">
+						<img class="demo cursor" src="pics/thumb/pic_2.jpg" style="width:100%" onclick="currentSlide(2)" alt="3 Friends">
+					</div>
+				
+					<div class="gallery">
+						<img class="demo cursor" src="pics/thumb/pics_3.jpg"style="width:100%" onclick="currentSlide(3)" alt="Get your exercise">
+					</div>
+				
+					<div class="gallery">
+						<img class="demo cursor" src="pics/thumb/pic_4.jpg" style="width:100%" onclick="currentSlide(4)" alt="Stay positive">
+					</div>
+
+					<div class="gallery">
+						<img class="demo cursor" src="pics/thumb/pic_5.jpg" style="width:100%" onclick="currentSlide(5)" alt="Family">
+					</div>
+
+					<div class="gallery">
+						<img class="demo cursor" src="pics/thumb/pic_6.jpg" style="width:100%" onclick="currentSlide(6)" alt="Professional">
+					</div>
 			</div>
 		</section>
 		<!-- END GALLERY -->
@@ -257,6 +183,7 @@
 			</div>
 		</section>
 		<!--END RSVP -->
+	</body>
 		
 		<!-- FOOTER -->
 	<footer>
@@ -266,5 +193,5 @@
 		<div>
 	</footer>
 		<!--END FOOTER -->
-	</body>
+	
 </html>
