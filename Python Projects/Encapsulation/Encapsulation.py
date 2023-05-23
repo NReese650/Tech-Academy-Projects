@@ -22,6 +22,18 @@ class EncapsulationExample:
         """
         print("Private Method")
 
+    def get_private_attribute(self):
+        """
+        Getter method for the private attribute.
+        """
+        return self.__private_attribute
+
+    def set_private_attribute(self, value):
+        """
+        Setter method for the private attribute.
+        """
+        self.__private_attribute = value
+
     def use_attributes_and_methods(self):
         """
         Method to demonstrate the use of attributes and methods.
@@ -56,6 +68,12 @@ print(obj._protected_attribute)
 
 # Accessing private attribute 
 print(obj._EncapsulationExample__private_attribute)
+
+# Using the setter method to modify the private attribute
+obj.set_private_attribute("New Private Attribute")
+
+# Accessing the modified private attribute
+print(obj.get_private_attribute())
 
 # Calling public method
 obj.public_method()
